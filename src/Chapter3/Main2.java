@@ -22,5 +22,9 @@ public class Main2 {
         arr.display();
 
         System.out.println(arr.median());
+
+        arr.sort();
+
+        arr.display();
     }
 }

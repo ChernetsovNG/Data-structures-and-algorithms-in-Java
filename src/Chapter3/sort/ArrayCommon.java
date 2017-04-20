@@ -30,4 +30,7 @@ public class ArrayCommon {
     public long get(int index) {
         return a[index];
     }
+
+    public void sort() {
+    }
 }

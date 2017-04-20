@@ -5,7 +5,7 @@ public class ArrayBub extends ArrayCommon {
         super(max);
     }
 
-    public void bubbleSort() {
+    private void bubbleSort() {
         int in;
         int outRight;
         int outLeft = 0;
@@ -27,6 +27,10 @@ public class ArrayBub extends ArrayCommon {
             }
         }
 
+    }
+
+    public void sort() {
+        this.bubbleSort();
     }
 
 }

@@ -5,7 +5,7 @@ public class ArrayIns extends ArrayCommon {
         super(max);
     }
 
-    public void insertionSort() {
+    private void insertionSort() {
         int in, out;
 
         for (out = 1; out < nElems; out++) {
@@ -31,6 +31,10 @@ public class ArrayIns extends ArrayCommon {
         } else {
             return (tmpArr.get(nElems/2) + tmpArr.get((nElems/2) - 1))/2;
         }
+    }
+
+    public void sort() {
+        this.insertionSort();
     }
 
 }
