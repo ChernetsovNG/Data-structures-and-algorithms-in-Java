@@ -37,21 +37,4 @@ public class ArrayIns extends ArrayCommon {
         this.insertionSort();
     }
 
-    //удаление дубликатов (массив предварительно отсортирован)
-    public void noDups() {
-        long[] b = new long[a.length];
-        int k = 0;
-
-        b[k++] = a[0];
-
-        for (int i = 1; i < nElems; i++) {
-            if (a[i] != a[i-1]) {
-                b[k++] = a[i];
-            }
-        }
-
-        a = b;
-        nElems = k;
-    }
-
 }
