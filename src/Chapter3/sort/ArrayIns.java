@@ -5,8 +5,9 @@ public class ArrayIns extends ArrayCommon {
         super(max);
     }
 
-    private void insertionSort() {
+    public int insertionSort() {
         int in, out;
+        nOps = 0;
 
         for (out = 1; out < nElems; out++) {
             long temp = a[out];
@@ -14,9 +15,12 @@ public class ArrayIns extends ArrayCommon {
             while (in > 0 && a[in-1] >= temp) {
                 a[in] = a[in - 1];
                 --in;
+                nOps++;
             }
             a[in] = temp;
         }
+
+        return nOps;
     }
 
     public long median() {
@@ -31,10 +35,6 @@ public class ArrayIns extends ArrayCommon {
         } else {
             return (tmpArr.get(nElems/2) + tmpArr.get((nElems/2) - 1))/2;
         }
-    }
-
-    public void sort() {
-        this.insertionSort();
     }
 
 }

@@ -11,7 +11,7 @@ public class Main1 {
 
         arr.display();
 
-        arr.sort();
+        arr.bubbleSort();
 
         arr.display();
     }

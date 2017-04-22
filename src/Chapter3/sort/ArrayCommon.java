@@ -3,10 +3,12 @@ package Chapter3.sort;
 public class ArrayCommon {
     protected long[] a;
     protected int nElems;
+    protected int nOps;
 
     public ArrayCommon(int max) {
         a = new long[max];
         nElems = 0;
+        nOps = 0;
     }
 
     //заполняем массив nRandom случайными числами от -rightBorder до rightBorder
@@ -71,6 +73,4 @@ public class ArrayCommon {
         return a[index];
     }
 
-    public void sort() {
-    }
 }
