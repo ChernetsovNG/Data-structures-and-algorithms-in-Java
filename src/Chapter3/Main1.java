@@ -7,7 +7,7 @@ public class Main1 {
         int maxSize = 50;
         ArrayBub arr = new ArrayBub(maxSize);
 
-        arr.fillRandom(maxSize, 1000);
+        arr.fillRandom(maxSize, 1000, true);
 
         arr.display();
 

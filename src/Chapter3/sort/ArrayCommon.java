@@ -10,7 +10,7 @@ public class ArrayCommon {
     }
 
     //заполняем массив nRandom случайными числами от -rightBorder до rightBorder
-    public void fillRandom(int nRandom, long rightBorder) {
+    public void fillRandom(int nRandom, long rightBorder, boolean onlyPositive) {
         if (nRandom > a.length) {
             throw new IndexOutOfBoundsException("Must be nRandom <= nMax");
         }
@@ -18,10 +18,18 @@ public class ArrayCommon {
         a = new long[a.length];
         nElems = 0;
 
-        for (int i = 0; i < nRandom; i++) {
-            long n = (long) (-rightBorder + Math.random() * rightBorder * 2);
-            this.insert(n);
+        if (onlyPositive) {
+            for (int i = 0; i < nRandom; i++) {
+                long n = (long) (Math.random() * rightBorder);
+                this.insert(n);
+            }
+        } else {
+            for (int i = 0; i < nRandom; i++) {
+                long n = (long) (-rightBorder + Math.random() * rightBorder * 2);
+                this.insert(n);
+            }
         }
+
     }
 
     public void insert(long value) {
